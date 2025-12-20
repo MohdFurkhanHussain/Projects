@@ -1,0 +1,22 @@
+Introduction to Web Development for Data Scientists
+Why Learn Web Development as a Data Scientist?
+Most data science work involves exploring datasets, building models, and analyzing results. However, in many real-world situations, the value of your work increases significantly when others can interact with it. Web development provides a way to make your models and insights accessible through simple user interfaces or APIs.
+
+Even a basic understanding of web technologies allows you to:
+
+Present your results beyond notebooks
+Create simple forms to collect user input
+Serve your machine learning models via a web application
+Share interactive visualizations or summaries
+How Much Web Development is Enough?
+As a data scientist, you do not need to become a full-stack web developer. Instead, it's more practical to focus on a few key skills that complement your existing workflow:
+
+HTML to create and structure web pages
+CSS to control the appearance and layout
+Flask (Python Framework) to build lightweight web applications and APIs
+These skills are sufficient for creating interfaces where users can interact with your models or view results dynamically.
+
+A Practical Approach
+This course introduces just enough web development to support your work as a data scientist. The goal is to help you understand how to connect the outputs of your models with simple, user-friendly web interfaces using tools you’re already comfortable with—primarily Python.
+
+We will begin with foundational concepts like HTML and CSS, and then move to using Flask for building basic applications.

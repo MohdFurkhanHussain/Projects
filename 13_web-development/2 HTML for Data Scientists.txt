@@ -1,0 +1,53 @@
+HTML for Data Scientists
+
+What is HTML?
+HTML (HyperText Markup Language) is the standard language used to define the structure of web pages. It tells the browser how to display content like text, forms, buttons, and tables.
+
+As a data scientist, you can use HTML to:
+
+Create forms that take input from users
+Display model results on a page
+Structure information clearly
+Basic HTML Elements
+Page Structure
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web App</title>
+</head>
+<body>
+  <!-- Content goes here -->
+</body>
+</html>
+
+Headings and Paragraphs
+<h1>Model Results</h1>
+<p>This page shows the output of a machine learning model.</p>
+
+Forms and Inputs
+<form action="/predict" method="post">
+  <label for="feature">Enter a value:</label>
+  <input type="text" name="feature" id="feature">
+  <button type="submit">Predict</button>
+</form>
+
+Displaying Tables
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td>29</td>
+  </tr>
+</table>
+
+Summary
+You only need to learn a small set of HTML tags to create basic interfaces:
+
+Structural: <html>, <head>, <body>
+Text: <h1> to <h6>, <p>, <span>
+Forms: <form>, <input>, <button>
+Tables: <table>, <tr>, <td>, <th>
+This is enough to build simple pages that collect input and display results. You will connect these pages with Python using Flask in later lessons.

@@ -1,0 +1,58 @@
+CSS for Data Scientists
+
+What is CSS?
+CSS (Cascading Style Sheets) is used to control the appearance of HTML elements. It allows you to change fonts, colors, spacing, and layout.
+
+For data scientists, CSS helps make basic web interfaces more readable and user-friendly. Even a few lines of CSS can make your pages easier to use.
+
+Ways to Use CSS
+Inline CSS (directly in the HTML tag)
+<p style="color: green;">Prediction Successful</p>
+
+Internal CSS (inside a <style> block)
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    input {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+    }
+  </style>
+</head>
+
+Common CSS Properties
+Property	What it does
+color	Text color
+background	Background color
+margin	Space outside the element
+padding	Space inside the element
+font-size	Size of the text
+border	Adds a border around elements
+text-align	Aligns text (left, center, right)
+Example
+<body>
+  <h1>Prediction Result</h1>
+  <form>
+    <input type="text" placeholder="Enter value">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+
+With the internal CSS above, this form will have padding and better spacing.
+
+Summary
+You don’t need to master CSS as a data scientist. Knowing how to:
+
+Set padding and margins
+Style buttons and inputs
+Control font and color
+is often enough to make your tools more usable. We will now move on to connecting everything using Python and Flask.
