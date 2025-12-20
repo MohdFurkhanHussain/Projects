@@ -1,0 +1,45 @@
+Essential Git Branch Commands
+View All Branches (Including Remote)
+git branch -a
+
+Creating and Switching Branches
+Create a New Branch
+git branch feature-navbar
+
+Switch to a Branch
+git checkout feature-navbar
+
+Or with the newer command:
+
+git switch feature-navbar
+
+Create and Switch in One Command
+git checkout -b feature-navbar
+
+Or:
+
+git switch -c feature-navbar
+
+Working with Branches
+Making Changes on a Branch
+# Create and switch to new branch
+git checkout -b feature-login
+ 
+# Make changes
+echo "Login form" > login.html
+git add login.html
+git commit -m "Add login form"
+ 
+# Your changes exist only on this branch
+
+Switching Between Branches
+# Switch back to main
+git checkout main
+ 
+# login.html doesn't exist here!
+ 
+# Switch back to feature branch
+git checkout feature-login
+ 
+# login.html is back!
+

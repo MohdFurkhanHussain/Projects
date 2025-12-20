@@ -1,0 +1,58 @@
+Introduction to Git and GitHub
+
+What is Version Control?
+Definition: Version control is a system that records changes to files over time so you can recall specific versions later. It’s like a time machine for your code.
+
+Why use it?
+
+Tracks changes over time.
+Restores older versions when something breaks.
+Allows multiple people to work on the same project.
+Helps experiment safely.
+The problem without version control:
+
+index.html
+index_final.html
+index_final_final.html
+index_final_v2_really_final.html
+This is messy, error-prone, and hard to manage.
+
+Centralized vs Distributed Version Control
+Centralized (CVCS) – e.g., SVN
+
+One central server stores the code.
+If the server goes down, no one can commit changes.
+Distributed (DVCS) – e.g., Git
+
+Every developer has a complete copy of the repository.
+You can commit changes offline.
+More robust against server failures.
+What is Git?
+Git is a distributed version control system created by Linus Torvalds (the creator of Linux) in 2005.
+Git tracks changes in your files, especially source code.
+Works locally first and then syncs with remote repositories.
+Git vs GitHub
+Git → The tool that manages your code history (installed on your computer).
+GitHub → A hosting service for Git repositories (like Google Drive for your Git projects). Also alternatives: GitLab, Bitbucket.
+Installing Git
+Windows
+Go to https://git-scm.com/.
+Download the installer.
+Follow the prompts (use default settings if unsure).
+macOS
+brew install git
+
+Linux (Debian/Ubuntu)
+sudo apt update
+sudo apt install git
+
+Configuring Git
+Run these commands in your terminal after installing Git:
+
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global core.editor "code --wait"  # optional, sets VS Code as editor
+
+To check your config:
+
+git config --list

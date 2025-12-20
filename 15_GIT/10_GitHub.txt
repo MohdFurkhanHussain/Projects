@@ -1,0 +1,131 @@
+.gitignore in Git
+Not all files should be tracked by Git (e.g., passwords, compiled files, system files).
+
+Creating .gitignore
+Create a .gitignore file in your repository root
+
+touch .gitignore
+
+Common .gitignore Patterns
+# Ignore specific files
+secret.txt
+config.env
+ 
+# Ignore file types
+.log
+.tmp
+.cache
+ 
+# Ignore directories
+node_modules
+build
+dist
+ 
+# Ignore files in any directory
+.bak
+ 
+# Exception Track this file even if ignored
+!important.log
+
+Global .gitignore
+Set up a global ignore file for all repositories
+
+git config --global core.excludesfile ~.gitignore_global
+
+Common .gitignore Templates
+For Node.js projects
+
+node_modules
+npm-debug.log
+.env
+dist
+.log
+For Python projects
+
+__pycache__
+.py[cod]
+$py.class
+venv
+.env
+.egg-info
+For IDEEditor files
+
+.vscode
+.idea
+.swp
+.DS_Store
+Thumbs.db
+Removing Files from Git
+Remove File from Repository and Disk
+git rm file.txt
+git commit -m Remove file.txt
+
+Remove File from Repository but Keep on Disk
+git rm --cached file.txt
+git commit -m Stop tracking file.txt
+
+This is useful when you accidentally committed a file that should be ignored.
+
+MovingRenaming Files
+Git tracks file movements
+
+git mv oldname.txt newname.txt
+git commit -m Rename oldname.txt to newname.txt
+
+This is equivalent to
+
+mv oldname.txt newname.txt
+git rm oldname.txt
+git add newname.txt
+
+Practical Examples
+Example 1 Fixing a Mistake
+# You accidentally staged a file
+git add passwords.txt
+ 
+# Unstage it
+git restore --staged passwords.txt
+ 
+# Add it to .gitignore
+echo passwords.txt  .gitignore
+ 
+# Stage and commit .gitignore
+git add .gitignore
+git commit -m Add .gitignore to exclude sensitive files
+
+Example 2 Cleaning Up Working Directory
+# See what's changed
+git status
+ 
+# Review the changes
+git diff
+ 
+# Discard changes to a specific file
+git restore style.css
+ 
+# Or discard all changes
+git restore .
+
+Command Summary
+Command	Description
+git status	Show working tree status
+git diff	Show unstaged changes
+git diff --staged	Show staged changes
+git restore [file]	Discard working directory changes
+git restore --staged [file]	Unstage files
+git reset --soft HEAD~1	Undo last commit, keep changes staged
+git reset HEAD~1	Undo last commit, keep changes unstaged
+git reset --hard HEAD~1	Undo last commit, discard changes
+git rm [file]	Remove file from repository
+git rm --cached [file]	Stop tracking file
+git mv [old] [new]	Renamemove file
+Exercise
+Create a new repository with several files
+Make changes to multiple files
+Use git status and git diff to review changes
+Stage only some changes
+Create a .gitignore file and add patterns
+Practice undoing changes with git restore
+Try amending a commit with git commit --amend
+Experiment with different reset options (be careful with --hard!)
+Challenge Create a file with sensitive data, commit it, then properly remove it from history and add it to .gitignore.

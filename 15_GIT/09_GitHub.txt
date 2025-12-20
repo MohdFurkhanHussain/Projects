@@ -1,0 +1,45 @@
+Essential Remote Repository Commands
+Connecting to Remotes
+View Remotes
+git remote -v
+
+Add Remote
+git remote add origin https://github.com/username/repository.git
+
+Change Remote URL
+git remote set-url origin https://github.com/username/new-repo.git
+
+Core Operations
+Clone Repository
+git clone https://github.com/username/repository.git
+
+Push Changes
+# First push (set upstream)
+git push -u origin main
+ 
+# Regular push
+git push
+ 
+# Push specific branch
+git push origin branch-name
+
+Pull Changes
+# Pull (fetch + merge)
+git pull
+ 
+# Pull specific branch
+git pull origin branch-name
+
+Fetch Changes
+# Fetch without merging
+git fetch
+ 
+# Fetch all remotes
+git fetch --all
+
+Branch Management
+List Remote Branches
+git branch -r
+
+Delete Remote Branch
+git push origin --delete branch-name

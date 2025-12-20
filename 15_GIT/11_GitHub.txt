@@ -1,0 +1,86 @@
+Git Stash
+What is Git Stash?
+Git stash temporarily saves your uncommitted changes so you can work on something else, then come back and re-apply them later.
+
+Core Stash Commands
+Save Changes to Stash
+# Stash all changes
+git stash
+ 
+# Stash with a message
+git stash save "work in progress on feature X"
+ 
+# Include untracked files
+git stash -u
+
+View Stashes
+# List all stashes
+git stash list
+
+Output example:
+
+stash@{0}: On main: work in progress on feature X
+stash@{1}: WIP on develop: 5002d47 fix conflict
+Apply Stash
+# Apply most recent stash
+git stash apply
+ 
+# Apply specific stash
+git stash apply stash@{2}
+ 
+# Apply and remove from stash list
+git stash pop
+
+Remove Stashes
+# Remove most recent stash
+git stash drop
+ 
+# Remove specific stash
+git stash drop stash@{1}
+ 
+# Clear all stashes
+git stash clear
+
+Useful Stash Operations
+View Stash Contents
+# Show files in latest stash
+git stash show
+ 
+# Show detailed diff
+git stash show -p
+ 
+# Show specific stash diff
+git stash show -p stash@{1}
+
+Create Branch from Stash
+# Create new branch and apply stash
+git stash branch new-feature-branch
+
+Stash Specific Files
+# Interactive stash
+git stash -p
+
+Common Use Cases
+Switch Branches Quickly
+# Working on feature, need to fix bug on main
+git stash
+git checkout main
+# Fix bug...
+git checkout feature-branch
+git stash pop
+
+Pull Without Committing
+git stash
+git pull
+git stash pop
+
+Commands Summary
+Command	Description
+git stash	Save changes to stash
+git stash list	List all stashes
+git stash apply	Apply stash without removing
+git stash pop	Apply and remove stash
+git stash drop	Delete a stash
+git stash show	View stash contents
+git stash clear	Remove all stashes
+git stash branch [name]	Create branch from stash

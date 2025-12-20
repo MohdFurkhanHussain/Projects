@@ -1,0 +1,190 @@
+Merge Conflicts and How to resolve them
+Fast-Forward Merge
+When there are no divergent commits, Git simply moves the pointer forward:
+
+# On main branch
+git checkout main
+ 
+# Merge feature branch
+git merge feature-navbar
+
+Output:
+
+Fast-forward
+ navbar.html | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+Three-Way Merge
+When branches have diverged, Git creates a merge commit:
+
+git checkout main
+git merge feature-login
+
+Git will open an editor for the merge commit message.
+
+Resolving Merge Conflicts
+Conflicts occur when the same lines are changed in different branches.
+
+What a Conflict Looks Like
+git merge feature-branch
+
+Output:
+
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+Conflict Markers in File
+<<<<<<< HEAD
+<h1>Welcome to Our Site</h1>
+=======
+<h1>Welcome to My Website</h1>
+>>>>>>> feature-branch
+
+Resolving Conflicts
+Open the conflicted file
+Decide which changes to keep
+Remove conflict markers
+Stage and commit
+# After editing the file
+git add index.html
+git commit -m "Resolve merge conflict in index.html"
+
+Conflict Resolution Strategies
+Understanding "ours" and "theirs":
+
+During a merge conflict, Git uses specific terminology:
+
+"ours" = The branch you're currently on (the branch you're merging INTO)
+"theirs" = The branch you're merging FROM (the incoming changes)
+Keep current branch changes (ours):
+
+git checkout --ours index.html
+
+This keeps the version from your current branch, discarding all changes from the incoming branch. Works properly when:
+
+You're certain your current branch has the correct implementation
+The incoming changes are outdated or incorrect
+You want to maintain consistency with other files in your branch
+Keep incoming branch changes (theirs):
+
+git checkout --theirs index.html
+
+This accepts all changes from the branch you're merging, discarding your current branch's version. Works properly when:
+
+The incoming branch has the most up-to-date or correct version
+Your current changes are no longer needed
+You want to fully adopt the incoming implementation
+Important Note: These commands work ONLY during an active merge conflict. They replace the entire file with either version, not individual conflict sections.
+
+Use a merge tool:
+
+git mergetool
+
+Branch Management
+Delete a Branch
+After merging, you can delete the branch:
+
+# Delete local branch
+git branch -d feature-navbar
+ 
+# Force delete (if not merged)
+git branch -D feature-navbar
+
+Rename a Branch
+# Rename current branch
+git branch -m new-name
+ 
+# Rename a different branch
+git branch -m old-name new-name
+
+List Merged/Unmerged Branches
+# Show merged branches
+git branch --merged
+ 
+# Show unmerged branches
+git branch --no-merged
+
+Branching Strategies
+Feature Branch Workflow
+# 1. Create feature branch
+git checkout -b feature-shopping-cart
+ 
+# 2. Work on feature
+# ... make commits ...
+ 
+# 3. Merge back to main
+git checkout main
+git merge feature-shopping-cart
+ 
+# 4. Delete feature branch
+git branch -d feature-shopping-cart
+
+Hotfix Workflow
+# 1. Create hotfix from main
+git checkout main
+git checkout -b hotfix-security
+ 
+# 2. Fix the issue
+# ... make changes ...
+git commit -m "Fix security vulnerability"
+ 
+# 3. Merge to main
+git checkout main
+git merge hotfix-security
+ 
+# 4. Also merge to develop if exists
+git checkout develop
+git merge hotfix-security
+
+Visualizing Branches
+See Branch Graph
+git log --graph --oneline --all
+
+Output:
+
+* 3a4f5d6 (HEAD -> main) Merge feature-login
+|\
+| * 8b9c0d1 (feature-login) Add login form
+* | 7e2f3a5 Update homepage
+|/
+* 1d2e3f4 Initial commit
+See Branch Divergence
+git log main..feature-branch
+
+Shows commits in feature-branch that aren't in main.
+
+Best Practices
+Keep branches focused - One feature per branch
+Use descriptive names - feature-user-auth not new-stuff
+Delete merged branches - Keep repository clean
+Merge regularly - Don't let branches diverge too much
+Test before merging - Ensure branch works correctly
+Common Branch Naming Conventions
+feature/ - New features (feature/user-login)
+bugfix/ - Bug fixes (bugfix/header-alignment)
+hotfix/ - Urgent production fixes (hotfix/security-patch)
+release/ - Release preparation (release/v2.0)
+chore/ - Maintenance tasks (chore/update-dependencies)
+Command Summary
+Command	Description
+git branch	List branches
+git branch [name]	Create branch
+git checkout [branch]	Switch branch
+git checkout -b [branch]	Create and switch
+git switch [branch]	Switch branch (newer)
+git switch -c [branch]	Create and switch (newer)
+git merge [branch]	Merge branch into current
+git branch -d [branch]	Delete branch
+git branch -m [new-name]	Rename branch
+git log --graph --oneline --all	Visualize branches
+Practice Exercise
+Create a new repository
+Create a file main.txt with "Main branch content"
+Create a branch called feature-a
+Add a file feature-a.txt and commit
+Switch back to main
+Create another branch feature-b from main
+Add a file feature-b.txt and commit
+Merge feature-a into main
+Merge feature-b into main
+Create a conflict intentionally and resolve it
+Advanced: Try rebasing instead of merging to maintain a linear history.

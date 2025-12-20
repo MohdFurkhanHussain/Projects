@@ -1,0 +1,88 @@
+Advanced Tracking and Managing
+Checking Status
+The most important diagnostic command in Git:
+
+git status
+
+This tells you:
+
+Which branch you're on
+What files are modified
+What files are staged
+What files are untracked
+Status States
+# Untracked (new file)
+Untracked files:
+  newfile.txt
+ 
+# Modified (changed but not staged)
+Changes not staged for commit:
+  modified: existing.txt
+ 
+# Staged (ready to commit)
+Changes to be committed:
+  new file: newfile.txt
+  modified: existing.txt
+
+Viewing Changes
+See Unstaged Changes
+git diff
+
+Shows what you've changed but haven't staged yet.
+
+See Staged Changes
+git diff --staged
+
+Shows what will go into your next commit.
+
+See Changes Between Commits
+git diff HEAD~1 HEAD
+
+Compares the last commit with the current one.
+
+Undoing Changes
+Git provides several ways to undo changes depending on where they are:
+
+1. Discard Working Directory Changes
+To restore a file to its last committed state:
+
+git restore file.txt
+
+Or for all files:
+
+git restore .
+
+Warning: This permanently discards uncommitted changes!
+
+2. Unstage Files
+To remove files from staging area but keep changes:
+
+git restore --staged file.txt
+
+Or the older syntax:
+
+git reset HEAD file.txt
+
+3. Amend the Last Commit
+Forgot to include a file or want to change the commit message?
+
+# Stage the forgotten file
+git add forgotten.txt
+ 
+# Amend the previous commit
+git commit --amend -m "New commit message"
+
+4. Reset to a Previous Commit
+Soft Reset (keeps changes in staging):
+
+git reset --soft HEAD~1
+
+Mixed Reset (keeps changes in working directory):
+
+git reset HEAD~1
+
+Hard Reset (discards all changes):
+
+git reset --hard HEAD~1
+
+Warning: --hard permanently deletes uncommitted work!

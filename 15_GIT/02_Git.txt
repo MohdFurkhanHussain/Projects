@@ -1,0 +1,33 @@
+Understanding the Git Workflow
+
+Git Workflow Basics
+Git has three key areas:
+
+Working Directory – Where you edit files.
+Staging Area – Where you prepare files for committing.
+Repository – Where committed changes are stored permanently.
+Basic flow:
+
+Edit files → git add → git commit
+First Git Commands
+Let’s try:
+
+mkdir my-first-git-project
+cd my-first-git-project
+git init
+
+Output:
+
+Initialized empty Git repository in ...
+You’ve just created your first local Git repository.
+
+Mini Exercise
+Install Git on your system.
+
+Configure your name and email.
+
+Create a folder named my-first-repo.
+
+Initialize it with git init.
+
+Run git status and see what it says.

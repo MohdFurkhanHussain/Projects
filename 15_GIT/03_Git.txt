@@ -1,0 +1,110 @@
+Practically Implementing Git Workflow
+
+Creating a Repository
+There are two ways to start working with Git:
+
+1. Starting from scratch
+
+mkdir my-first-repo
+cd my-first-repo
+git init
+
+You’ll see:
+
+Initialized empty Git repository in /path/to/my-first-repo/.git/
+This .git folder is the brain of your repository — it stores the entire history of your project.
+
+2. Cloning an existing repository
+
+git clone https://github.com/user/repo.git
+
+This downloads the entire project with history from a remote server like GitHub.
+
+Adding Files
+Let’s create a file:
+
+echo "Hello Git!" > hello.txt
+
+Check what Git sees:
+
+git status
+
+You’ll see:
+
+Untracked files:
+  hello.txt
+Untracked means Git sees the file but hasn’t started tracking it.
+
+Staging Changes
+To start tracking the file:
+
+git add hello.txt
+
+To stage everything at once:
+
+git add .
+
+At this point, the file is staged — ready to be saved into history.
+
+Committing Changes
+A commit is like taking a snapshot of your project:
+
+git commit -m "Add hello.txt with a greeting"
+
+Commit messages should describe why the change was made, not just what changed.
+
+Viewing History
+To see the commit history:
+
+git log
+
+For a shorter, cleaner view:
+
+git log --oneline
+
+Example:
+
+a1b2c3d Add hello.txt with a greeting
+Understanding the Git Workflow
+Files in Git move through three main states:
+
+Untracked – not being tracked yet.
+Staged – ready to be committed.
+Committed – saved permanently in the Git history.
+Basic flow:
+
+Working Directory → git add → Staging Area → git commit → Repository
+Making Further Changes
+Edit the file:
+
+echo "This is my first change" >> hello.txt
+
+Check the status:
+
+git status
+
+You’ll see it’s “modified.” Stage and commit:
+
+git add hello.txt
+git commit -m "Update hello.txt with a new line"
+
+Quick Command Recap
+git init                # start a new repository
+git clone <url>         # copy a repository
+git status              # check file states
+git add <file>          # stage changes
+git commit -m "msg"     # save staged changes
+git log --oneline       # view history in short form
+
+Practice Challenge
+Create a folder git-practice.
+
+Initialize it as a Git repo.
+
+Add a file notes.txt with some text.
+
+Stage and commit it with a clear message.
+
+Modify notes.txt and commit the change.
+
+Run git log --oneline to see your commits.
