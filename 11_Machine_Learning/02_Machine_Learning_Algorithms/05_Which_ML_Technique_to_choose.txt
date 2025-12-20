@@ -1,0 +1,77 @@
+Which ML Technique to choose
+
+Which one to use when?
+Alright, we’ve met all three machine learning styles.
+
+Now imagine this is a reality show.
+
+You’re the host.
+A problem shows up.
+Three contestants - Supervised, Unsupervised, and Reinforcement - raise their hands.
+
+But only one gets to solve it.
+
+So let’s figure out:
+Who learns what? And when?
+
+Round 1: Recognizing the Animals
+Problem: You have 10,000 images of animals. Each one is labeled as "cat" or "dog".
+
+Who’s raising their hand?
+
+Supervised Learning stands up.
+
+“Give me the answers, and I’ll learn the pattern.”
+
+That’s what it’s built for - labeled data and clear goals.
+
+Round 2: Recognizing the Crowd
+Problem: You have customer data, but no labels. You don’t know who buys what or why. You just have behavior logs.
+
+Who’s up now?
+
+Unsupervised Learning says, "I got this." “I’ll find patterns in the data without needing labels.”
+
+It starts grouping people based on what they do - even if you didn’t ask it to.
+
+It’s the curious explorer of the group.
+
+Round 3: The Game Player
+Problem: You need to train a robot to walk. Or teach a car to drive. Or beat someone in chess.
+
+Who steps up?
+
+Reinforcement Learning smirks and says:
+"Let me try. I’ll figure it out after a few thousand mistakes."
+
+It thrives where actions have consequences - and learning comes from experience.
+
+Cheat Sheet
+Learning Type	Learns From	Example Task
+Supervised	Labeled data	Email spam filter
+Unsupervised	Unlabeled data	Customer segmentation
+Reinforcement	Trial and error	Self-driving car, video games
+Quick Quiz - Who Would You Call?
+Predict tomorrow’s weather based on past labeled data?
+→ Supervised
+
+Discover hidden groups in social media users?
+→ Unsupervised
+
+Train a drone to land smoothly on a platform?
+→ Reinforcement
+
+Classify X-rays as healthy or not?
+→ Supervised
+
+Conclusion
+All three learning styles are useful.
+None is better than the others.
+It depends on the problem.
+
+Think of them like characters in a team:
+
+Supervised is the student with notes
+Unsupervised is the detective with no clues
+Reinforcement is the gamer who never gives up
+Together, they form the core of machine learning.

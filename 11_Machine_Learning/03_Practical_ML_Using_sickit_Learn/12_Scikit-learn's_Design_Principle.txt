@@ -1,0 +1,64 @@
+Scikit-learn's Design Principle
+
+Scikit-Learn has a simple and consistent API that makes it easy to use and understand. Below are the key design principles behind it:
+
+1. Consistency
+All objects follow a standard interface, which makes learning and using different tools in Scikit-Learn easier.
+
+2. Estimators
+Any object that learns from data is called an estimator.
+
+Use the .fit() method to train an estimator.
+In supervised learning, pass both X (features) and y (labels) to .fit(X, y).
+Hyperparameters (like strategy='mean' in SimpleImputer) are set when creating the object.
+Example:
+
+imputer = SimpleImputer(strategy="median")
+imputer.fit(data)
+
+3. Transformers
+Some estimators can also transform data. These are called transformers.
+
+Use .transform() to apply the transformation after fitting.
+Use .fit_transform() to do both in one step.
+Example:
+
+X_transformed = imputer.fit_transform(data)
+
+4. Predictors
+Models that can make predictions are predictors.
+
+Use .predict() to make predictions on new data.
+Use .score() to evaluate performance (e.g., accuracy or R²).
+Example:
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+score = model.score(X_test, y_test)
+
+5. Inspection
+Hyperparameters can be accessed directly: model.param_name
+Learned parameters are stored with an underscore: model.coef_, imputer.statistics_
+6. No Extra Classes
+Inputs and outputs are basic structures like NumPy arrays or Pandas DataFrames.
+No need to learn custom data types.
+7. Composition
+You can combine steps into a Pipeline, chaining transformers and a final predictor.
+
+Example:
+
+pipeline = Pipeline([
+    ("imputer", SimpleImputer(strategy="median")),
+    ("model", LinearRegression())
+])
+pipeline.fit(X, y)
+
+8. Sensible Defaults
+Most tools in Scikit-Learn work well with default settings, so you can get started quickly.
+
+Note on DataFrames
+Even if you input a Pandas DataFrame, the output of transformers like transform() will be a NumPy array. You can convert it back like this:
+
+X = imputer.transform(housing_num)
+housing_tr = pd.DataFrame(X, columns=housing_num.columns, index=housing_num.index)

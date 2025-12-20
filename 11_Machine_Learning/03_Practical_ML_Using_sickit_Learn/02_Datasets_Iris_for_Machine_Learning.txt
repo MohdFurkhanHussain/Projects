@@ -1,0 +1,7 @@
+Datasets for Machine Learning
+
+Machine Learning requires quality datasets for training and testing models. Some popular sources include:
+
+OpenML.org – A collaborative platform offering a wide range of datasets with metadata and tools for benchmarking.
+UCI Machine Learning Repository – One of the oldest and most widely used sources for machine learning datasets.
+Kaggle – A data science community offering large-scale, real-world datasets and competitions.

@@ -1,0 +1,85 @@
+History of Machine Learning
+
+Imagine it’s 1936. The world is on the edge of chaos. But in a quiet university in England, a 24-year-old genius named Alan Turing is sitting in his room... thinking.
+
+Not about war. Not about politics.
+
+He’s wondering: “What if I could design a machine… that thinks?”
+
+This wasn’t science fiction. This was the beginning of a revolution.
+
+The Birth of the Turing Machine
+Alan Turing doesn’t build a robot. He builds an idea. A hypothetical machine — which we now call the Turing Machine — that could simulate any algorithm you can think of, given enough time and tape.
+
+Think of it like this: if you can explain the rules clearly enough, this “machine” can follow them blindly and produce the answer.
+
+It was like inventing the brain… without the neurons.
+
+Fast Forward to 1950: “Can Machines Think?”
+In 1950, Turing writes a paper with the boldest question of his time:
+“Can machines think?”
+
+To answer that, he proposes a test — later called the Turing Test — where if a machine can fool a human into thinking it’s also human, we must admit it has some form of intelligence.
+
+This moment is now seen as the starting pistol for Artificial Intelligence.
+
+Spoiler alert: Machines didn’t pass that test then.
+But they’re getting really close now.
+
+Enter: The First Learning Machine (1957)
+Fast forward a few more years.
+
+A psychologist named Frank Rosenblatt creates the Perceptron — the first algorithm that could learn from data.
+
+It was simple, crude, and limited.
+But it was a machine that could improve itself.
+That was enough to make the scientific world think.
+
+Headlines declared:
+
+Perceptron could walk, talk, and learn like a baby!
+
+Okay… it was oversold. It flopped.
+But it planted a seed. And seeds grow.
+
+1980s: The Quiet Comeback
+The world moves on. AI becomes a punchline in computer science. Funding dries up.
+
+But in dusty labs and stubborn minds, the idea of machine learning refuses to die.
+
+In 1986, researchers bring back neural networks — inspired by how our brain works — and this time, the models can finally do something useful. Like recognizing handwriting. Or predicting data trends.
+
+Still early. Still basic.
+
+But the machines were learning again.
+
+1997: Game Over, Humans
+In 1997, IBM's Deep Blue defeats world chess champion Garry Kasparov.
+
+Let that sink in:
+A computer beat the best human in the world… in chess.
+And not by brute force alone — but by learning and optimizing strategies.
+
+Suddenly, “Can machines think?” becomes less of a joke and more of a warning.
+
+We’d entered the Machine Learning era.
+
+But How Do Machines Learn?
+That’s the million-dollar question, right?
+
+Not all machines learn the same way.
+
+Some learn like students, from labeled examples — we call this Supervised Learning.
+
+Some are explorers, figuring things out without answers — Unsupervised Learning.
+
+And some are more like gamers, trial-and-error addicts, learning from wins and losses — Reinforcement Learning.
+
+That’s what we’ll explore next.
+
+But remember: It all started with a question in a quiet room in 1936.
+
+A question that hasn’t been fully answered yet.
+
+Can machines think?
+

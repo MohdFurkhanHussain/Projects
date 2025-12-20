@@ -1,0 +1,9 @@
+Installing Scikit-learn
+
+Open your terminal (or use Jupyter Notebook / Google Colab) and run:
+
+pip install scikit-learn
+
+Or in Google Colab:
+
+!pip install scikit-learn

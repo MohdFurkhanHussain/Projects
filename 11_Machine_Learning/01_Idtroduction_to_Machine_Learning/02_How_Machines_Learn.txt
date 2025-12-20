@@ -1,0 +1,67 @@
+How Machines Learn
+
+Not so long ago, if you had picked up your phone, opened ChatGPT and asked it what to do in a certain particular situation, it would have ignored you—and people might have looked at you like you were losing your mind. Today, it's normal. Technology is growing like never before, and Machine Learning (ML) is at the center of this transformation.
+
+Back in the 1990s, one of the earliest real-world applications of ML was the spam filter. Imagine checking your email back then—your inbox would often be flooded with unwanted messages about dubious offers, miracle diets, or suspicious job proposals. Engineers started building systems that could learn to recognize these spam patterns based on examples. The idea wasn't to hard-code the rules (like "if email contains the word 'lottery', mark as spam") but instead to let the system learn from actual spam and non-spam (ham) emails.
+
+Over time, as users kept marking messages as spam, the system learned to identify new spam even before the user had to touch it. That was early machine learning in action.
+
+What Machine Learning Is Not
+If you download hundreds of books onto your computer, it doesn’t automatically become smart. Your computer doesn’t start writing like Shakespeare or summarizing those books for you. It just stores data. That’s not machine learning. That’s just data storage and retrieval.
+
+Machine Learning kicks in when a computer can improve at a task by learning from data and experience—without being manually programmed for every scenario.
+
+What Machine Learning Is
+Machine Learning is the science (and art) of programming computers so they can learn from data.
+
+Here’s a slightly more general definition:
+
+“Machine learning is the field of study that gives computers the ability to learn without being explicitly programmed.” — Arthur Samuel, 1959
+
+And a more engineering-focused one:
+
+“A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.” — Tom Mitchell, 1997
+
+Let’s break that down with the spam filter example:
+
+Task (T): Identify whether an email is spam or not
+Experience (E): Examples of labeled emails (spam or ham)
+Performance measure (P): Accuracy — how many emails are correctly classified
+If the system keeps getting better at flagging spam based on past emails, it is said to be learning.
+
+The examples used to train the system are called the training set, and each individual example is a training instance (or sample). The part of the ML system that does the actual learning and prediction is called the model. Think of the model as the brain that’s being trained.
+
+Some popular models include:
+
+Neural Networks
+Random Forests
+Support Vector Machines
+Traditional Programming vs Machine Learning
+To truly understand what makes ML different, let’s compare it with the traditional approach.
+
+Traditional Approach
+In traditional programming:
+
+A human writes explicit rules for the computer to follow.
+Input + Rules = Output
+Example: If an email contains the word “free money,” mark it as spam. But what if spammers start writing “frëe m0ney”? The rule breaks.
+
+ 
+
+Machine Learning Approach
+In the ML approach:
+
+The computer is given examples (data) and learns the rules by itself.
+Input + Output (examples) → Learning → Model (Rules)
+Then: New Input + Model = Prediction
+ 
+
+So, instead of hardcoding logic for every possible spam variation, the system learns patterns in spammy emails over time and generalizes them to new messages—even ones it hasn’t seen before.
+
+Summary
+Just storing data is not machine learning.
+ML is about improving performance with experience.
+The system learns patterns from data rather than following hardcoded rules.
+The model is what makes predictions.
+One of the earliest ML use-cases was spam detection.
+Unlike traditional programming, ML systems adapt as they see more data.

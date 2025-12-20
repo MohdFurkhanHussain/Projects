@@ -1,0 +1,22 @@
+Predicting Gurgaon City House Prices
+
+Why Are We Building This?
+Gurgaon, a rapidly growing city in India, has seen a sharp rise in real estate development over the past decade. With its proximity to Delhi, booming IT hubs, and modern infrastructure, Gurgaon has become a major attraction for both homebuyers and investors. However, the real estate market here is highly dynamic and often difficult to assess without proper data-driven tools.
+
+We’re building a Gurgaon house price prediction model to help:
+
+Understand how factors like location, size, number of rooms, and amenities affect property prices in Gurgaon.
+Assist buyers in identifying fair prices based on historical trends.
+Help sellers estimate an appropriate asking price.
+Empower real estate agents and platforms to improve recommendations and negotiations.
+How Will We Build It?
+While we don’t have access to a large, clean dataset of house prices in Gurgaon right now, we will use a well-known and cleaned dataset—the California housing dataset—as a proxy. This will allow us to build, test, and evaluate a working model with real-world variables like:
+
+Median income of the area
+Proximity to the city center
+Number of rooms
+Latitude and longitude
+Population density
+We’ll treat this as a simulation: suppose the California data is Gurgaon data, and suppose we are building this model for a neighborhood where both you and I live or work nearby.
+
+Once the model is developed and understood, we can later adapt the same approach to real Gurgaon data when available, using the same techniques and logic.

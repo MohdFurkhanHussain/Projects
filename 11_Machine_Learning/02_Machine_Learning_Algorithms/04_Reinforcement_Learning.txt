@@ -1,0 +1,88 @@
+Reinforcement Learning
+
+Picture this.
+
+A small robot is standing in front of a maze.
+The goal? Reach the exit.
+
+The robot doesn’t have a map. No one tells it where to go.
+So it takes a step forward… hits a wall.
+Ouch.
+
+It takes a step to the right… nothing happens.
+Takes another step… and the floor lights up.
+A reward.
+
+The robot starts smiling (well, in code) — it’s learning.
+
+That’s reinforcement learning.
+
+So, What Is Reinforcement Learning?
+It’s learning by doing.
+By trying.
+By failing.
+By getting rewards — or punishments — and figuring out what works.
+
+It’s the kind of learning we all do naturally.
+
+When a kid touches a hot pan — they learn not to do it again.
+When a dog gets a treat for sitting — it starts sitting a lot more.
+
+Machines can do the same.
+
+Why “Reinforcement”?
+Because every action gets feedback.
+Positive or negative.
+That feedback is called reward.
+
+The machine's job is to figure out:
+“What sequence of actions gets me the most reward over time?”
+
+It doesn’t memorize answers.
+It learns a strategy.
+
+A Real-World Analogy: Playing a Video Game
+Imagine you’re playing Super Mario.
+The first time, you fall into holes.
+You bump into enemies.
+But slowly, you learn when to jump, where to run, how to win.
+
+You’re not memorizing.
+You’re adjusting based on results.
+That’s reinforcement learning.
+
+Now imagine a bot doing the same thing — but thousands of times faster, and never getting bored.
+
+That’s how machines are now beating humans in games we thought were unbeatable.
+
+Key Terms (Simple Version)
+Let’s keep this light:
+
+Agent: The learner (our robot, bot, or AI).
+Environment: The world it lives in (the maze, the game, the road).
+Action: What the agent does.
+Reward: The score it gets — good or bad — after taking an action.
+Policy: The strategy it develops over time.
+The goal?
+Maximize total reward.
+
+The AlphaGo Story (2015)
+In 2015, Google DeepMind built AlphaGo — a reinforcement learning system that learned how to play the ancient game of Go.
+
+No one thought a computer could beat a Go champion. The game was too complex.
+
+But AlphaGo didn’t just study human moves — it played millions of games against itself, learning from every win and loss.
+
+And in 2016, it crushed the world champion.
+
+That’s reinforcement learning at its best.
+
+Where Is It Used?
+Self-driving cars: Learn how to drive safely by trying things in simulation.
+
+Robotics: Teach a robot to walk, pick things up, or open doors.
+
+Finance: Learn when to buy or sell stock based on reward signals.
+
+Game AIs: From chess to Dota, RL bots are everywhere.
+

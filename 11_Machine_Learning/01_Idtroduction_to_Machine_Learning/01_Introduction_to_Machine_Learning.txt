@@ -1,0 +1,33 @@
+Introduction to Machine Learning
+Agenda
+What is Machine Learning?
+Applications of ML
+Common ML Libraries
+PyTorch vs TensorFlow
+What is Machine Learning?
+Machine Learning is a subset of Artificial Intelligence that enables systems to learn from data without explicit programming. It improves over time as it gains more data.
+
+Types of ML:
+Supervised Learning
+Unsupervised Learning
+Reinforcement Learning
+Applications of Machine Learning
+Make robots recognize faces or learn to walk
+Discover patterns in user logs, financial data, etc.
+Segment customers for personalized marketing
+Recommend products based on user behavior
+Detect fraudulent transactions
+Forecast sales and demand
+Automate and optimize real-world decisions
+Common Machine Learning Libraries
+Scikit-Learn – Ideal for regression, classification, clustering (beginner-friendly)
+TensorFlow – Google’s library for large-scale ML
+Keras – High-level deep learning API (comes with TensorFlow)
+PyTorch – Facebook’s deep learning framework
+Pandas / NumPy – Data cleaning and handling tools
+For deep learning beginners: start with Keras
+
+PyTorch vs TensorFlow
+Both are popular frameworks for deep learning
+TensorFlow offers more production deployment tools
+PyTorch is often preferred for its ease of use and debugging capabilities
