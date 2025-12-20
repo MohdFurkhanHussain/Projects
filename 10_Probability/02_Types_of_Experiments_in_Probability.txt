@@ -1,0 +1,30 @@
+Types of Experiments in Probability
+Types of Experiments
+Deterministic – Always produces the same outcome when repeated under identical conditions.
+Probabilistic / Random – Outcome is uncertain and may vary even if the experiment is repeated under identical conditions.
+Sample Space
+The sample space is the set of all possible outcomes of a probabilistic experiment.
+
+Examples:
+
+Rolling a Die → { 1, 2, 3, 4, 5, 6 }
+Tossing 2 Coins → { (HH), (HT), (TH), (TT) }
+For Coins
+
+Number of possible outcomes = 2ⁿ
+(where n is the number of coins)
+For Dice
+
+Number of possible outcomes = 6ⁿ
+(where n is the number of dice)
+For Cards
+A standard deck contains 52 cards:
+
+26 Red Cards
+
+13 ♥️ Hearts → A, 2–10, J, Q, K
+13 ♦️ Diamonds → A, 2–10, J, Q, K
+26 Black Cards
+
+13 ♠️ Spades → A, 2–10, J, Q, K
+13 ♣️ Clubs → A, 2–10, J, Q, K

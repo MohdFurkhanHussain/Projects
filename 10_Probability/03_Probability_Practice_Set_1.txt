@@ -1,0 +1,14 @@
+Probability Practice Set 1
+Questions
+1. You roll a fair six-sided die. What is the probability of getting an even number?
+
+2. Two coins are tossed. Find the sample space associated with this random experiment.
+
+3. Two six-sided dice are rolled. What is the probability that the sum is 7?
+
+4. A bag contains 3 red, 2 blue, and 5 green balls. What is the probability of randomly selecting a red ball?
+
+5. A card is drawn at random from a deck. Find the probability of:
+
+Getting a heart
+Getting a face card

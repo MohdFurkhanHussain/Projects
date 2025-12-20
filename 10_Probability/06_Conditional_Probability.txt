@@ -1,0 +1,88 @@
+Conditional Probability
+What is Conditional Probability?
+Conditional probability is the probability of an event A occurring, given that another event B has already occurred. It helps us update our understanding based on new information.
+
+We denote it as:
+
+P(A/B) = P(A and B) / P(B)
+
+This is read as: "The probability of A given B."
+
+Law of Total Probability
+The Law of Total Probability helps you find the probability of an event A by breaking it down based on other known events B1, B2, ..., Bn.
+
+Formula:
+P(A) = P(A/B1) * P(B1) + P(A/B2) * P(B2) + ... + P(A/Bn) * P(Bn)
+
+Conditions to Use This Law:
+Partition of the Sample Space
+The events B1, B2, ..., Bn must:
+
+Be mutually exclusive (no overlap):
+No two events can happen at the same time.
+Be collectively exhaustive:
+Together, they cover the entire sample space.
+Known Probabilities
+You must know:
+
+P(Bi) for each event in the partition.
+P(A/Bi), the conditional probability of A given Bi.
+P(Bi) > 0
+The probability of each Bi must be greater than 0, since you can't condition on an impossible event.
+
+Real-life Analogy
+Suppose you have a box containing:
+
+5 red balls
+3 blue balls
+2 green balls
+Now, you're told that the ball picked is not green. What is the probability that it’s red?
+
+Let:
+
+A = ball is red
+B = ball is not green
+Now, out of the 8 balls that are not green (5 red + 3 blue), 5 are red.
+
+So: P(Red / Not Green) = 5 / 8
+
+Formula Breakdown
+If we know:
+
+P(A and B): The probability that both A and B happen
+P(B): The probability that B happens
+Then: P(A / B) = P(A and B) / P(B)
+
+This means: among all the outcomes where B occurs, how many also include A?
+
+Example Problem
+A class has 60% boys and 40% girls. 30% of the boys and 10% of the girls play football. If a randomly selected student is a football player, what is the probability that the student is a boy?
+
+Let:
+
+B = student is a boy → P(B) = 0.6
+
+G = student is a girl → P(G) = 0.4
+
+F = student plays football
+
+P(F / B) = 0.3
+P(F / G) = 0.1
+Now calculate the total probability that a student plays football:
+
+P(F) = P(F / B) * P(B) + P(F / G) * P(G)
+
+P(F) = 0.3 * 0.6 + 0.1 * 0.4 = 0.18 + 0.04 = 0.22
+
+Now use conditional probability to find P(B / F):
+
+P(B / F) = (P(F / B) * P(B)) / P(F)
+
+P(B / F) = 0.18 / 0.22 ≈ 0.818
+
+So, there's about an 81.8% chance that a football player is a boy.
+
+Common Mistakes to Avoid
+Confusing P(A / B) with P(B / A)
+Forgetting to divide by P(B)
+Assuming P(A / B) is the same as P(B / A) — they are not

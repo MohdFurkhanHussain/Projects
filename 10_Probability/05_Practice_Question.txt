@@ -1,0 +1,15 @@
+Practice Questions on Probability
+Practice Questions
+A box contains 4 red, 3 green, and 2 blue balls. One ball is picked at random. What is the probability that the ball is not green?
+
+Two coins are tossed. What is the probability of getting at least one head?
+
+A number is chosen at random from the set {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}.
+What is the probability that the number is a multiple of 3 or 5?
+
+A bag contains 6 white and 4 black balls. Two balls are drawn with replacement.
+What is the probability that both are white?
+
+A student knows the answer to 70% of the questions on a test.
+If one question is selected at random, what is the probability that the student doesn’t know the answer?
+

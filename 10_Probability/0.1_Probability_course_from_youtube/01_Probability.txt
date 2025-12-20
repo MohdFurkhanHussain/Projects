@@ -1,0 +1,41 @@
+                                Terminology
+
+1 Random Expeirment
+      An expeirment is called Random Expeirment.
+   a. It has more than one possible outcome.
+   b. It is not possible to predict the outcome in advance.
+
+2 Trial
+    Trial rfers to a single execution of a random experinment.
+    Each trial produces an outcome.
+
+3 Outcome
+    Outcome refers to a siingle possible result of a trial.
+
+4 Sample space
+    Sample space of a random expeirment is the set of all possible outcomes that can occur.
+    Generally, one randomexpeirment has one set of sample space.
+
+5 Event
+    Event is a specific set of outcomes from random expeirmentor process.
+    Essentially, it's a subset of a sample space.
+    an event can include single outcome or it can include multiple outcomes.
+    One random expeirment can have multiple expeirments.
+
+
+
+
+                                Types of Event.
+
+    1.Simple Event
+    2.Compound Event
+    3.Independent Events
+    4.Dependent Events
+    5.Mutually Execlussive Events
+    6.Exhaustive Events
+
+
+
+
+
+
