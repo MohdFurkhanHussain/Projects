@@ -1,0 +1,69 @@
+GROUP BY in MySQL
+The GROUP BY clause is used when you want to group rows that have the same values in specified columns.
+It’s usually combined with aggregate functions like COUNT(), SUM(), AVG(), MAX(), or MIN().
+
+We are telling MySQL:
+“Group these rows together by this column, and then apply an aggregate function to each group.”
+
+Example: Count of employees in each department
+SELECT department, COUNT(*) AS total_employees
+FROM employees
+GROUP BY department;
+
+Here, we’re grouping all employees by their department and counting how many are in each group.
+
+Example: Average salary per department
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department;
+
+We are telling MySQL: “Group the data by department, then calculate the average salary for each group.”
+
+Using GROUP BY with Multiple Columns
+You can group by more than one column to get more detailed groupings.
+
+Example: Count by department and job title
+SELECT department, job_title, COUNT(*) AS count
+FROM employees
+GROUP BY department, job_title;
+
+This will count how many employees hold each job title within each department.
+
+The HAVING Clause
+Once you've grouped data using GROUP BY, you might want to filter the groups themselves based on the result of an aggregate function. This is where HAVING comes in.
+
+HAVING is like WHERE, but it works after the grouping is done.
+
+Example: Departments with more than 5 employees
+SELECT department, COUNT(*) AS total
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+
+We are telling MySQL: “First group employees by department, then only show those departments where the total number is greater than 5.”
+
+Difference Between WHERE and HAVING
+Clause	Used For	Example Use
+WHERE	Filters rows before grouping	WHERE salary > 50000
+HAVING	Filters groups after grouping	HAVING AVG(salary) > 60000
+You can also use both together:
+
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+WHERE status = 'active'
+GROUP BY department
+HAVING AVG(salary) > 60000;
+
+Here’s what’s happening:
+
+WHERE filters only the active employees.
+GROUP BY groups them by department.
+HAVING filters out departments with low average salary.
+Using WITH ROLLUP in MySQL
+The WITH ROLLUP clause in MySQL is used with GROUP BY to add summary rows (totals and subtotals) to your result set.
+
+Summary
+Keyword	Role
+GROUP BY	Groups rows with same values into summary rows
+HAVING	Filters groups based on aggregate results
+Use GROUP BY when you want to aggregate data. Use HAVING when you want to filter those aggregated groups.

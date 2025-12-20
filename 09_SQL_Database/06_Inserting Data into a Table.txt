@@ -1,0 +1,50 @@
+Inserting Data into a Table
+Inserting data into a MySQL table can be done in two ways: inserting one row at a time or inserting multiple rows at once. Below are the steps to create a new database, create a table, and insert data into it.
+
+1. Create a New Database
+CREATE DATABASE schooldb;
+
+2. Select the Database
+USE schooldb;
+
+3. Create the student Table
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    grade VARCHAR(10),
+    date_of_birth DATE
+);
+
+4. Insert Data into the Table
+Insert One Row at a Time
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (1, 'Ayesha Khan', 16, '10th', '2007-05-15');
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (2, 'Ravi Sharma', 17, '11th', '2006-03-22'); 
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (3, 'Meena Joshi', 15, '9th', NULL);
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (4, 'Arjun Verma', 18, '12th', NULL);
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (5, 'Sara Ali', 16, '10th', NULL);
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (6, 'Karan Mehta', 17, '11th', NULL);
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (7, 'Tanya Roy', 15, '9th', NULL);
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (8, 'Vikram Singh', 18, '12th', NULL);
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (9, 'Anjali Desai', 16, '10th', NULL);
+INSERT INTO student (id, name, age, grade, date_of_birth) VALUES (10, 'Farhan Zaidi', 17, '11th', NULL);
+
+Insert All Rows at Once
+INSERT INTO student (id, name, age, grade) VALUES
+(15, 'Ayesha Khan', 16, '10th'),
+(25, 'Ravi Sharma', 17, '11th'),
+(35, 'Meena Joshi', 15, '9th'),
+(45, 'Arjun Verma', 18, '12th'),
+(55, 'Sara Ali', 16, '10th'),
+(65, 'Karan Mehta', 17, '11th'),
+(75, 'Tanya Roy', 15, '9th'),
+(85, 'Vikram Singh', 18, '12th'),
+(95, 'Anjali Desai', 16, '10th'),
+(105, 'Farhan Zaidi', 17, '11th');
+
+5. Verify the Inserted Records
+To check all the data in the table:
+
+SELECT * FROM student;
+
+This will display all the records in the student table.

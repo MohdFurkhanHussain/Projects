@@ -1,0 +1,25 @@
+Installing MySQL
+MySQL is a popular open-source relational database management system used for web and data-driven applications. Here's a quick guide to get it installed on your system along with MySQL Workbench—a graphical tool for managing databases.
+
+Step 1: Download MySQL Installer
+Visit the official MySQL website: https://dev.mysql.com/downloads/installer/
+Choose the MySQL Installer for Windows (prefer the full version if you have a stable internet connection).
+Step 2: Run the Installer
+Launch the installer and choose "Developer Default" to install MySQL Server, Workbench, and other useful tools.
+Click Next and let the installer check for requirements.
+Step 3: Install and Configure MySQL Server
+Select MySQL Server and Workbench from the list if not preselected.
+
+Click Next → Execute to begin installation.
+
+Configure MySQL server settings:
+
+Choose Standalone MySQL Server.
+Set root password (remember this).
+Add a new user (optional).
+Step 4: Finish Installation
+Complete the configuration steps.
+Launch MySQL Workbench from the Start Menu.
+Connect using your root credentials to start managing databases.
+You're Done!
+Now MySQL and Workbench are ready to use. Start creating databases, running queries, and building your apps.

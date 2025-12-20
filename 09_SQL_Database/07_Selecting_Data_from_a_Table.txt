@@ -1,0 +1,130 @@
+Selecting Data from a Table
+Lets now understand how to query data from a table in MySQL using the SELECT statement, filter results using the WHERE clause, and apply different comparison operators including how to work with NULL values.
+
+1. Basic SELECT Statement
+To retrieve all data from the student table:
+
+SELECT * FROM student;
+
+To retrieve specific columns (e.g., only name and grade):
+
+SELECT name, grade FROM student;
+
+2. Using the WHERE Clause
+The WHERE clause is used to filter rows based on a condition.
+
+Example: Students in 10th grade
+SELECT * FROM student WHERE grade = '10th';
+
+Example: Students older than 16
+SELECT * FROM student WHERE age > 16;
+
+3. Comparison Operators in MySQL
+Operator	Description	Example
+=	Equals	WHERE age = 16
+!=	Not equal to	WHERE grade != '12th'
+<>	Not equal to (alternative)	WHERE grade <> '12th'
+>	Greater than	WHERE age > 16
+<	Less than	WHERE age < 17
+>=	Greater than or equal to	WHERE age >= 16
+<=	Less than or equal to	WHERE age <= 18
+BETWEEN	Within a range (inclusive)	WHERE age BETWEEN 15 AND 17
+IN	Matches any in a list	WHERE grade IN ('10th', '12th')
+NOT IN	Excludes list items	WHERE grade NOT IN ('9th', '11th')
+LIKE	Pattern matching	WHERE name LIKE 'A%' (names starting with A)
+NOT LIKE	Pattern not matching	WHERE name NOT LIKE '%a' (names not ending in a)
+4. Handling NULL Values
+What is NULL?
+NULL represents missing or unknown values. It is not equal to 0, empty string, or any other value.
+
+Common Mistake (Incorrect):
+-- This will not work as expected
+SELECT * FROM student WHERE grade = NULL;
+
+Correct Ways to Handle NULL
+Condition	Correct Syntax
+Is NULL	WHERE grade IS NULL
+Is NOT NULL	WHERE grade IS NOT NULL
+Example: Select students with no grade assigned
+SELECT * FROM student WHERE grade IS NULL;
+
+Example: Select students who have a grade
+SELECT * FROM student WHERE grade IS NOT NULL;
+
+5. Combining Conditions
+You can use AND, OR, and parentheses to combine conditions.
+
+Example: Students in 10th grade and older than 16
+SELECT * FROM student WHERE grade = '10th' AND age > 16;
+
+Example: Students in 9th or 12th grade
+SELECT * FROM student WHERE grade = '9th' OR grade = '12th';
+
+Example: Complex conditions
+SELECT * FROM student 
+WHERE (grade = '10th' OR grade = '11th') AND age >= 16;
+
+6. Sorting Results with ORDER BY
+Sort by age in ascending order:
+
+SELECT * FROM student ORDER BY age ASC;
+
+Sort by name in descending order:
+
+SELECT * FROM student ORDER BY name DESC;
+
+7. Limiting Results with LIMIT
+Get only 5 rows:
+
+SELECT * FROM student LIMIT 5;
+
+Get 5 rows starting from the 3rd (offset 2):
+
+SELECT * FROM student LIMIT 2, 5;
+
+You're right! The _ wildcard is very handy for matching dates, especially when you're looking for values at a specific position (like a specific day or month). Let’s expand the section accordingly:
+
+8. Using Wildcards with LIKE
+Wildcards are used with the LIKE operator to search for patterns. They’re helpful when you're not exactly sure about the full value, or you want to match based on structure or partial content.
+
+There are two wildcards in MySQL:
+
+% – Matches zero or more characters
+_ – Matches exactly one character
+Example: Names starting with 'A'
+SELECT * FROM students
+WHERE name LIKE 'A%';
+
+This finds any name that starts with 'A', like Aakash, Ananya, Aryan.
+
+Matching Dates with _ Wildcard
+The _ wildcard is useful for matching specific patterns in date strings, especially in YYYY-MM-DD format.
+
+Let’s say you want to find records from the 5th day of any month:
+
+SELECT * FROM attendance
+WHERE date LIKE '____-__-05';
+
+Explanation:
+
+____ matches any year (4 characters)
+__ matches any month (2 characters)
+05 is the 5th day
+You’re basically telling MySQL:
+
+"Give me all rows where the date ends with -05 — which means the 5th of any month, any year."
+
+More Date Pattern Examples
+Pattern to be Matched	Matches
+'2025-05-%'	Any day in May 2025
+'2024-12-__'	All 2-digit days in December 2024
+'____-01-01'	1st January of any year
+'202_-__-__'	Any date in the 2020s decade
+'____-__-3_'	All dates from day 30 to 39 (not valid, but works syntactically)
+Quick Recap: LIKE Wildcard Matching
+Pattern	Meaning
+'A%'	Starts with A
+'%sh'	Ends with sh
+'%ar%'	Contains “ar”
+'R____'	5-letter name starting with R
+'____-__-05'	Dates with day = 05

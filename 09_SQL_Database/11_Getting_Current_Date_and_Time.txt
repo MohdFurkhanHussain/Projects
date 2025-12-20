@@ -1,0 +1,61 @@
+Getting Current Date and Time
+MySQL provides built-in functions to retrieve the current date, time, and timestamp. These are commonly used in data logging, time-based queries, and tracking records in data science workflows.
+
+1. CURRENT_DATE
+Returns the current date in YYYY-MM-DD format.
+
+SELECT CURRENT_DATE;
+
+Example Output:
+
+2025-05-02
+2. CURRENT_TIME
+Returns the current time in HH:MM:SS format.
+
+SELECT CURRENT_TIME;
+
+Example Output:
+
+14:23:45
+3. CURRENT_TIMESTAMP (or NOW())
+Returns the current date and time.
+
+SELECT CURRENT_TIMESTAMP;
+-- or
+SELECT NOW();
+
+Example Output:
+
+2025-05-02 14:23:45
+This is especially useful for storing creation or update times in records.
+
+4. LOCALTIME and LOCALTIMESTAMP
+These are synonyms for NOW() and return the current date and time.
+
+SELECT LOCALTIME;
+SELECT LOCALTIMESTAMP;
+
+These functions return the local date and time of the MySQL server, not the client's time zone.
+
+Important Clarification:
+The "local" in LOCALTIME refers to the time zone configured on the MySQL server, not the user's system.
+
+You can check the current server time zone using:
+
+5. Using in Table Inserts
+You can use NOW() or CURRENT_TIMESTAMP to auto-fill date-time columns.
+
+INSERT INTO logs (event, created_at)
+VALUES ('data_import', NOW());
+
+6. Date and Time Functions Recap
+Function	Returns	Example Output
+CURRENT_DATE	Date only	2025-05-02
+CURRENT_TIME	Time only	14:23:45
+NOW()	Date and time	2025-05-02 14:23:45
+CURRENT_TIMESTAMP	Date and time	2025-05-02 14:23:45
+LOCALTIME	Date and time	2025-05-02 14:23:45
+Best Practices
+Use CURRENT_TIMESTAMP for record timestamps.
+Use NOW() in queries to filter records by current time.
+Avoid relying on system time for business logic; prefer database time for consistency.
